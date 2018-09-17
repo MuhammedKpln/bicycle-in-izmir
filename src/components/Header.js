@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 class Header extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            //
-        }
-    }
     render() {
         return (
             <div className="header">
@@ -15,10 +8,10 @@ class Header extends Component {
                     <a href="/" className="router-link-exact-active router-link-active">B</a>
                 </div>
                 <div className="header__nav">
-                    <NavLink exact to="/" activeClassName="router-link-exact-active is-active">Anasayfa</NavLink>
-                    <NavLink to="/stations" activeClassName="router-link-exact-active is-active">İstasyonlar</NavLink>
+                    <NavLink exact to="/" activeClassName="router-link-exact-active is-active">Homepage</NavLink>
+                    <NavLink to="/stations" activeClassName="router-link-exact-active is-active">Stations</NavLink>
 
-                    <NavLink to="/madeby" activeClassName="router-link-exact-active is-active">Katkıda Bulunanlar</NavLink>
+                    <NavLink to="/madeby" activeClassName="router-link-exact-active is-active">Contributors</NavLink>
 
                     <a href="//github.com/muhammedkpln/bicycle-in-izmir">
                         <svg width="24" height="24" viewBox="0 0 24 24">

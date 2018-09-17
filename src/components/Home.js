@@ -3,13 +3,6 @@ import { NavLink } from 'react-router-dom'
 import Header from './Header'
 import Weather from './Weather'
 class Home extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            //
-        }
-    }
     render() {
         return (
             <div>
@@ -20,8 +13,8 @@ class Home extends Component {
                     </div>
                     <div className="home-block home-block--right">
                         <div>
-                            <p>Bisim'in sağladığı bisiklet kiralama hizmetine ait istasyonlardaki doluluk oranını görebilirsiniz.</p>
-                            <NavLink to="/stations" className="button" activeClassName="router-link-exact-active is-active">İstasyonlar</NavLink>
+                            <p>You can see the occupancy rate of the bicycle rental service provided by Alta Bicycle Share, Inc.</p>
+                            <NavLink to="/stations" className="button" activeClassName="router-link-exact-active is-active">Stations</NavLink>
                             <Weather />
                         </div>
                     </div>

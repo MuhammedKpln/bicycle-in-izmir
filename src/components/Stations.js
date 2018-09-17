@@ -12,7 +12,7 @@ class Stations extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://api.citybik.es//v2/networks/baksi-bisim")
+        axios.get("https://api.citybik.es//v2/networks/melbourne-bike-share")
             .then((response) => {
                 this.setState({
                     stations: response.data.network.stations
@@ -35,11 +35,11 @@ class Stations extends Component {
                                             <div>
                                                 <h2>{station.name}</h2>
                                                 <div>
-                                                    <h4>Toplam Park: </h4>
+                                                    <h4>Total stations: </h4>
                                                     <span>{station.extra.slots}</span>
                                                 </div>
                                                 <div>
-                                                    <h4>Bisiklet: </h4>
+                                                    <h4>Total bicycles: </h4>
                                                     <span>{station.empty_slots}</span>
                                                 </div>
                                             </div>
@@ -66,8 +66,8 @@ class Stations extends Component {
 
 const Map = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: 38.417860, lng: 26.9396337 }}
+        defaultZoom={13}
+        defaultCenter={{ lat: -37.826246, lng: 145.010307 }}
     >
         {
             props.stations.map((station) => {

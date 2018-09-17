@@ -14,7 +14,7 @@ class WeatherComponent extends Component {
     }
 
     getWeatherData = () => {
-        axios.get('https://api.openweathermap.org/data/2.5/forecast/daily?q=Izmir&units=metric&lang=tr&appid=a3f46c687f2144a15d0adc8b5d513af2').then(response => {
+        axios.get('https://api.openweathermap.org/data/2.5/forecast/daily?q=Melbourne&units=metric&lang=tr&appid=a3f46c687f2144a15d0adc8b5d513af2').then(response => {
             this.setState({
                 weather: response.data.list,
                 todaysTemp: response.data.list[0].temp.day
@@ -35,8 +35,8 @@ class WeatherComponent extends Component {
     render() {
         return (
             <div>
-                <h1>İzmir'de hava <span style={{ fontWeight: 'bold' }}>{Math.round(this.state.todaysTemp)}</span> derece. </h1>
-                <h4>Bisiklet'e binmek icin harika bir gun!</h4>
+                <h1>Melbourne is <span style={{ fontWeight: 'bold' }}>{Math.round(this.state.todaysTemp)}</span> &#8451; right now. </h1>
+                <h4>A great day to ride a bike!</h4>
                 <ul className="weather">
                     {this.state.weather.map((day) => {
                         return <li className="weather__block">
