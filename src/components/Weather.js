@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clear from '../assets/clear.svg'
 const axios = require('axios')
 const moment = require('moment')
 
@@ -41,7 +42,7 @@ class WeatherComponent extends Component {
                     {this.state.weather.map((day) => {
                         return <li className="weather__block">
                             <h3>{this.getMoment(day.dt)}</h3>
-                            <img src="https://vibrant-darwin-340aee.netlify.com/fonts/clear.svg" alt="açık"></img>
+                            <img src={Clear} alt="açık"></img>
                             <span>{Math.round(day.temp.day)}</span>
                         </li>
                     })}

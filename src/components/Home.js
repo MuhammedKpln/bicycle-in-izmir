@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import Header from './Header'
 import Weather from './Weather'
+import MainIcon from '../assets/main-icon.svg'
+
 class Home extends Component {
     render() {
         return (
@@ -9,7 +11,7 @@ class Home extends Component {
                 <Header />
                 <div className="home">
                     <div className="home-block home-block--left">
-                        <img src="https://vibrant-darwin-340aee.netlify.com/fonts/main-icon.svg" alt="main-icon"></img>
+                        <img src={MainIcon} alt="main-icon"></img>
                     </div>
                     <div className="home-block home-block--right">
                         <div>
